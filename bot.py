@@ -47,7 +47,10 @@ def help(update, context):
     update.message.reply_text(
         """Use \'/impersonate <lowercase_name>\' to make me impersonate.
         For example:
-        \'/impersonate james_bond\'"""
+        \'/impersonate james_bond\'
+
+        You can also use \'/impersonate2 <lowercase_name>\'
+        to use the second generating algorithm."""
     )
 
 
@@ -63,7 +66,7 @@ def error(update, context):
 
 def impersonate(update, context):
     """
-    Handles the /impersonate command
+    Handles the /impersonate command which uses Markov Chains
     """
 
     try:
@@ -88,6 +91,36 @@ def impersonate(update, context):
     except (IndexError, ValueError):
         update.message.reply_text(
             "Oops! Did you use '/impersonate <persons_name>' correctly!?"
+        )
+
+
+def impersonate2(update, context):
+    """
+    Handles the /impersonate2 command which uses RNNS
+    """
+
+    try:
+        if len(context.args) != 1:
+            raise IndexError
+        else:
+            name_string = context.args[0].lower()
+            if name_string in NAMES_STRING:
+                user_file_name = os.path.join("rnn_texts", name_string + ".txt")
+                user_texts = open(user_file_name, "r").readlines()
+                texts = []
+                for i in range(len(user_texts)):
+                    text = user_texts[i]
+                    texts.append(text)
+                sentence = random.choice(texts)
+                update.message.reply_text(
+                    f'{" ".join(name_string.split("_")).title()}: {sentence}'
+                )
+                return
+            else:
+                update.message.reply_text("Are you sure I know this person?")
+    except (IndexError, ValueError):
+        update.message.reply_text(
+            "Oops! Did you use '/impersonate2 <persons_name>' correctly!?"
         )
 
 
@@ -135,8 +168,9 @@ def main():
     # Add an handler for errors
     dp.add_error_handler(error)
 
-    # Add a handler for the impersonate command
+    # Add a handler for the impersonate commands
     dp.add_handler(CommandHandler("impersonate", impersonate))
+    dp.add_handler(CommandHandler("impersonate2", impersonate2))
 
     # Start the Bot
     updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN)
