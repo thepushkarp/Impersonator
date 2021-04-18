@@ -46,7 +46,7 @@ def clean_chat():
         cleaned_file.close()
 
 
-def save_user_chat(names):
+def save_user_chat(names: list):
     """
     Saves the chats of individual participants of the conversation
     """
@@ -80,7 +80,7 @@ def main():
 
     print("Creating separate file for each user...")
     save_user_chat(names)
-    print("Done!")
+    print("Cleaned!")
 
 
 if __name__ == "__main__":
