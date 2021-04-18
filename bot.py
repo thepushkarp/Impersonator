@@ -5,6 +5,11 @@ import json
 import random
 import markovify
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from dotenv import load_dotenv
+
+# Load env variables from .env
+load_dotenv()
+
 
 # Enable logging
 logging.basicConfig(
@@ -115,7 +120,9 @@ def main():
     # Create the Updater and pass it your bot's token.
     # Make sure to set use_context=True to use the new context based callbacks
     # Post version 12 this will no longer be necessary
-    TOKEN = "ADD-YOUR-BOTS-TOKEN"
+    TOKEN = os.getenv("TOKEN")
+    URL = os.getenv("URL")
+
     updater = Updater(TOKEN, use_context=True)
 
     # Get the dispatcher to register handlers
@@ -135,7 +142,7 @@ def main():
     updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN)
 
     # updater.bot.set_webhook(url=settings.WEBHOOK_URL)
-    updater.bot.set_webhook("ADD-YOUR-DEPLOYED-URL" + TOKEN)
+    updater.bot.set_webhook(URL + TOKEN)
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since
