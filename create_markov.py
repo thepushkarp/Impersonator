@@ -1,6 +1,5 @@
 import os
 import markovify
-import json
 
 # Names of users whose chat is to be extracted
 NAMESFILE = "user_names.txt"

@@ -1,10 +1,9 @@
 import logging
-import sys
 import os
 import json
 import random
 import markovify
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram.ext import Updater, CommandHandler
 from dotenv import load_dotenv
 
 # Load env variables from .env
@@ -78,7 +77,7 @@ def impersonate(update, context):
                 # Try for a max of 20 times for generating a sentence
                 count = 0
                 sentence = None
-                while sentence == None and count != 20:
+                while sentence is None and count != 20:
                     curr_model = random.choice(MODELS[name_string])
                     sentence = curr_model.make_sentence()
                     count += 1
