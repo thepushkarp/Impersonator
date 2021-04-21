@@ -1,6 +1,17 @@
-# Impersonator
+<h1 align="center">Impersonator</h1>
 
-A Telegram bot that takes in an exported WhatsApp chat and uses it to send you text in your and your friend's writing style 😎.
+
+<p align="center">
+  <a href="https://lgtm.com/projects/g/thepushkarp/Impersonator"><img alt="LGTM Grade" src="https://img.shields.io/lgtm/grade/python/github/thepushkarp/Impersonator?style=for-the-badge"></a>
+  <a href="https://github.com/thepushkarp/Impersonator/issues"><img alt="GitHub Issues" src="https://img.shields.io/github/issues/thepushkarp/Impersonator?style=for-the-badge"></a>
+  <a href="https://lgtm.com/projects/g/thepushkarp/Impersonator"><img alt="LGTM Alerts" src="https://img.shields.io/lgtm/alerts/github/thepushkarp/Impersonator?style=for-the-badge"></a>
+  <a href="https://github.com/thepushkarp/Impersonator/stargazers"><img alt="Stargazers" src="https://img.shields.io/github/stars/thepushkarp/Impersonator?style=for-the-badge"></a>
+  <a href="https://github.com/thepushkarp/Impersonator/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/thepushkarp/Impersonator?style=for-the-badge"></a>
+</p>
+
+<p align="center">A Telegram bot that takes in an exported WhatsApp chat and uses it to send you text in your and your friend's writing style 😎</p>
+
+---
 
 Internally, Impersonator can generate texts in two ways:
 
