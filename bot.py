@@ -95,7 +95,7 @@ def impersonate(update, context):
 
 def impersonate2(update, context):
     """
-    Handles the /impersonate2 command which uses RNNS
+    Handles the /impersonate2 command which uses RNNs
     """
 
     try:

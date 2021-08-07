@@ -1,6 +1,5 @@
 <h1 align="center">Impersonator</h1>
 
-
 <p align="center">
   <a href="https://lgtm.com/projects/g/thepushkarp/Impersonator"><img alt="LGTM Grade" src="https://img.shields.io/lgtm/grade/python/github/thepushkarp/Impersonator?style=for-the-badge"></a>
   <a href="https://github.com/thepushkarp/Impersonator/issues"><img alt="GitHub Issues" src="https://img.shields.io/github/issues/thepushkarp/Impersonator?style=for-the-badge"></a>
@@ -18,7 +17,7 @@ Internally, Impersonator can generate texts in two ways:
 -   The `/impersonate` command uses Markov Chains
 -   The `/impersonate2` command uses Character Level RNNs
 
-NOTE: Currently only tested for WhatsApp CHats exported from Android, but I think it should work for iOS as well.
+NOTE: Currently only tested for WhatsApp Chats exported from Android, but I think it should work for iOS as well.
 
 ## How to run?
 
@@ -31,19 +30,18 @@ NOTE: Currently only tested for WhatsApp CHats exported from Android, but I thin
 -   To impersonate using RNN, follow [this Colab link](https://colab.research.google.com/drive/1lRsuBCVRzl8zu8lxuGyron9tqt3h5heM?usp=sharing) to generate the text files and then save them offline.
 -   In the `.env` file, add the Telegram Bot token you get from [BotFather](https://core.telegram.org/bots#6-botfather) and your your Heroku WebHook URL for deploying this.
 -   Deploy to [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python).
--   Have Fun 🖖
+-   Have Fun impersonating 🖖.
 
 ## TODO
 
--   [x] Add the initial implementation.
--   [ ] Add details on how Markov Chains and RNNs work here to generate text in the style of the person.
--   [ ] Elaborate instructions in the README.
--   [ ] Tweak the hyperparameters in the RNN to improve text generation and use weights to generate text on-the fly.
+-   [x] Add the initial implementation
+-   [ ] Use custom models for RNN
 -   [ ] Refactor the codebase
+-   [ ] Elaborate instructions in the README
 
 ## Thanks
 
--   Thanks to [Filip Hracek](https://github.com/filiph) for creating the [Automatic Donald Trump](https://filiph.github.io/markov/) which was the inspiration for this project.
--   Thanks to [Max Woolf](https://github.com/minimaxir) for developing [textgenrnn](https://github.com/minimaxir/textgenrnn) that uses Character-level RNNs. Check [here](https://karpathy.github.io/2015/05/21/rnn-effectiveness/) to read more about Karapathy's blog on char-rnn.
--   Thanks to [Jeremy Singer-Vine](https://github.com/jsvine) for developing [markovify](https://github.com/jsvine/markovify) that made developing the Markov Chain Models a lot easier.
--   Thanks to my friends to extensively testing the initial versions of this and suggesting various improvements.
+-   [Filip Hracek](https://github.com/filiph) who created the [Automatic Donald Trump](https://filiph.github.io/markov/) which was the inspiration for this project.
+-   [Max Woolf](https://github.com/minimaxir) who developed [textgenrnn](https://github.com/minimaxir/textgenrnn) that uses Character-level RNNs. Check [here](https://karpathy.github.io/2015/05/21/rnn-effectiveness/) to read more about Karapathy's blog on char-rnn.
+-   [Jeremy Singer-Vine](https://github.com/jsvine) who developed [markovify](https://github.com/jsvine/markovify) that made developing the Markov Chain Models a lot easier.
+-   My friends who extensively tested the initial versions of this and suggesting further improvements.
