@@ -26,7 +26,7 @@ NOTE: Currently only tested for WhatsApp Chats exported from Android, but I thin
 -   Add the names of people who you want to personate using the bot in a new line in `user_names.txt`, as they appear in your exported chat.
     Ex: If you have someone's number saved as 'Birdy Bro 2', add this full name in the file.
 -   Run `python clean.py` to clean the file.
--   To impersonate suing Markov Chains, run `create_markov.py`.
+-   To impersonate using Markov Chains, run `create_markov.py`.
 -   To impersonate using RNN, follow [this Colab link](https://colab.research.google.com/drive/1lRsuBCVRzl8zu8lxuGyron9tqt3h5heM?usp=sharing) to generate the text files and then save them offline.
 -   In the `.env` file, add the Telegram Bot token you get from [BotFather](https://core.telegram.org/bots#6-botfather) and your your Heroku WebHook URL for deploying this.
 -   Deploy to [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python).
