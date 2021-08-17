@@ -94,6 +94,5 @@ if __name__ == "__main__":
         sys.version_info[0] == 3 and sys.version_info[1] < 8
     ):
         raise Exception("Python 3.8 or a more recent version is required.")
-        sys.exit(1)
 
     main()
