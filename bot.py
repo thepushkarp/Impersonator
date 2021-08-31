@@ -65,7 +65,7 @@ def error(update, context):
 
 def impersonate(update, context):
     """
-    Handles the /impersonate command which uses Markov Chains
+    Handles the /impersonate command which uses Markov Chains (Recommended to use)
     """
 
     try:
@@ -95,7 +95,7 @@ def impersonate(update, context):
 
 def impersonate2(update, context):
     """
-    Handles the /impersonate2 command which uses RNNs
+    Handles the /impersonate2 command which uses RNNs (Recommended to use the /impersonate command over this)
     """
 
     try:
