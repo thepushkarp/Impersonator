@@ -12,7 +12,9 @@
 
 ---
 
-Internally, Impersonator can generate texts in two ways:
+**Disclaimer**: _This project was made for fun to explore the possibilities of text generation. DO NOT use this with somebody's data without their proper consent._
+
+Impersonator can generate texts in two ways:
 
 -   The `/impersonate` command uses Markov Chains
 -   The `/impersonate2` command uses Character Level RNNs
