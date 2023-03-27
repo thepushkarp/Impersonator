@@ -1,4 +1,4 @@
-python-telegram-bot==20.1
+python-telegram-bot==20.2
 markovify==0.9.4
 pre-commit==3.2.0
 black==23.1.0
